@@ -1,0 +1,585 @@
+<html>
+<head>
+<style>
+.iconWrap {
+    border: 1px solid #101820;
+    border-radius: 10%;
+    width: 35px;
+    height: 3	5px;
+    padding: 5px;
+    font-size: 1.25em;
+    color:#101820;
+    position:relative
+}
+#item-container .iconWrap {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+.selectIconBox {
+    display: inline-block;
+    <!-- margin: 40px 40px; -->
+}
+
+.selectable .ui-selected { background: #F39814; color: white; }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function() {
+  
+  <!-- $('.selectable').contextmenu(function(){ -->
+   <!-- // $(".selectable").selectable(); -->
+   
+<!-- }); -->
+  <!-- $('.selectable').mouseenter(function(){ -->
+   <!-- $(this).css('background-color','tan'); -->
+   
+<!-- }); -->
+  $('.attendance').mouseleave(function(){ 
+  console.log('46');
+   rightButtonDown = false;
+}); 
+
+<!-- $('.selectable').contextmenu(function(){ -->
+<!-- console.log('context menu') -->
+    
+  <!-- }); -->
+ <!-- $('.selectable').mouseenter(function(){ -->
+
+   <!-- $(this).css('background-color','tan'); -->
+   
+<!-- }); -->
+var rightButtonDown = false;
+<!-- $(document).mousedown(function (e) { -->
+    <!-- if (e.which === 3) rightButtonDown = true; -->
+<!-- }); -->
+<!-- $(document).mouseup(function (e) { -->
+    <!-- if (e.which === 3) rightButtonDown = false; -->
+<!-- }); -->
+$(".selectable").click(function(){
+//if($(this)[0].style.backgroundColor =='tan'){
+//$(this).css('background-color','white');
+if(rightButtonDown){
+rightButtonDown = false;
+}else{
+rightButtonDown = true;}
+});
+
+$("#item-container").mouseleave(function(){
+rightButtonDown = false;
+});
+$(".selectable").bind("click mouseenter", function (event, delta) {
+
+if(rightButtonDown){
+$(this).css('background-color','tan');
+}
+});
+});
+</script>
+</head>
+<body>
+<div id="item-container" class="text-center">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Attendance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Gaurav</td>
+      <td class="attendance">
+	  <div class="element-medium-top element-medium-bottom">
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+ 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div> 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+	  <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div>
+ 
+ </div>
+</td>
+    </tr> <tr>
+      <th scope="row">2</th>
+      <td>Noorain</td>
+      <td  class="attendance">
+	  <div class="element-medium-top element-medium-bottom">
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+ 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div> 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+	  <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div>
+ 
+ </div>
+</td>
+    </tr>
+	<tr>
+      <th scope="row">3</th>
+      <td>Pradeep</td>
+      <td  class="attendance">
+	  <div class="element-medium-top element-medium-bottom">
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+ 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div> 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+	  <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div>
+ 
+ </div>
+</td>
+    </tr> 
+	<tr>
+      <th scope="row">4</th>
+      <td>H J</td>
+      <td  class="attendance">
+	  <div class="element-medium-top element-medium-bottom">
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+ 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div> 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+	  <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div>
+ 
+ </div>
+</td>
+    </tr>
+	<tr>
+      <th scope="row">5</th>
+      <td>Vijay </td>
+      <td  class="attendance">
+	  <div class="element-medium-top element-medium-bottom">
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+ 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div> 
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">1</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">2</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">3</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">4</div>
+    </div>
+	<div class="selectIconBox selectable">
+      <div class="item iconWrap">5</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">6</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">7</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">8</div>
+    </div>
+	  <div class="selectIconBox selectable">
+      <div class="item iconWrap">9</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">10</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">11</div>
+    </div>
+    <div class="selectIconBox selectable">
+      <div class="item iconWrap">12</div>
+    </div>
+ 
+ </div>
+</td>
+    </tr>
+	</table>
+  <!-- <div class="row element-medium-top element-medium-bottom"> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">1</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">2</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">3</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">4</div> -->
+    <!-- </div> -->
+	<!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">5</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">6</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">7</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">8</div> -->
+    <!-- </div> -->
+ 
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">9</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">10</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">11</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">12</div> -->
+    <!-- </div>  -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">1</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">2</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">3</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">4</div> -->
+    <!-- </div> -->
+	<!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">5</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">6</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">7</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">8</div> -->
+    <!-- </div> -->
+	  <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">9</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">10</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">11</div> -->
+    <!-- </div> -->
+    <!-- <div class="selectIconBox selectable"> -->
+      <!-- <div class="item iconWrap">12</div> -->
+    <!-- </div> -->
+ 
+ <!-- </div> -->
+</div>
+</body>
+</html>
